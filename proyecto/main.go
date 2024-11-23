@@ -1,5 +1,5 @@
-// Avance del primer trabajo
-//Nombres: Cristhian Sare, Freddy Campuzano
+// Avance del Autonomo#2
+//Nombres: Cristhian Sare, Freddy Campuzano, Iriany
 /*Descripción: Avance pequeño donde podemos observar la estructura de los
 productos y del usuario junto con la función getProduct*/
 //Materia: Programación orientada a objetos.
