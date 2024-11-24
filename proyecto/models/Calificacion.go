@@ -11,7 +11,7 @@ type Calificacion struct {
 	Fecha      time.Time `json:"fecha"`
 }
 
-// Método para dar calificación
+// DarCalificacion asigna puntuación y comentario a una calificación
 func (c *Calificacion) DarCalificacion(puntuacion int, comentario string) {
 	c.Puntuacion = puntuacion
 	c.Comentario = comentario

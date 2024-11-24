@@ -2,7 +2,7 @@ package models
 
 import "time"
 
-// Pago almacena detalles del pago de un pedido
+// Pago contiene los detalles de una transacción
 type Pago struct {
 	ID     int       `json:"id"`
 	Monto  float64   `json:"monto"`
@@ -11,9 +11,9 @@ type Pago struct {
 	Estado string    `json:"estado"`
 }
 
-// Método para realizar un pago
+// RealizarPago simula un pago exitoso
 func (p *Pago) RealizarPago() bool {
-	// Simulación de pago exitoso
 	p.Estado = "Completado"
+	p.Fecha = time.Now()
 	return true
 }

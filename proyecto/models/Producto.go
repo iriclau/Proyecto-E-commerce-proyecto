@@ -10,7 +10,7 @@ type Producto struct {
 	Stock       int      `json:"stock"`
 }
 
-// Método para actualizar el stock
+// ActualizarStock actualiza el inventario del producto
 func (p *Producto) ActualizarStock(cantidad int) {
 	p.Stock += cantidad
 }

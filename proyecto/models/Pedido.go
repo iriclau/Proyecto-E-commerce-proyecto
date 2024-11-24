@@ -1,17 +1,17 @@
 package models
 
-// Pedido representa un pedido realizado por un cliente
+// Pedido representa una orden de compra
 type Pedido struct {
 	ID           int           `json:"id"`
-	Cliente      Cliente       `json:"cliente"`
+	ClienteID    int           `json:"cliente_id"`
 	Productos    []Producto    `json:"productos"`
 	Total        float64       `json:"total"`
-	Estado       string        `json:"estado"` // "Pendiente", "Pagado", "Enviado", etc.
+	Estado       string        `json:"estado"`
 	Pago         Pago          `json:"pago"`
 	Calificacion *Calificacion `json:"calificacion,omitempty"`
 }
 
-// Método para actualizar estado
+// ActualizarEstado cambia el estado del pedido
 func (p *Pedido) ActualizarEstado(nuevoEstado string) {
 	p.Estado = nuevoEstado
 }
