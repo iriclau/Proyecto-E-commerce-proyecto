@@ -7,6 +7,20 @@ type Categoria struct {
 	Productos []Producto `json:"productos"`
 }
 
+// GetNombre y SetNombre  que devuelve y actualiza el nombre de la categoría
+func (c *Categoria) GetNombre() string {
+	return c.Nombre
+}
+
+func (c *Categoria) SetNombre(nombre string) {
+	c.Nombre = nombre
+}
+
+// SetProductos asigna una lista de productos a la categoría
+func (c *Categoria) SetProductos(productos []Producto) {
+	c.Productos = productos
+}
+
 // AgregarProducto añade un producto a la categoría
 func (c *Categoria) AgregarProducto(producto Producto) {
 	c.Productos = append(c.Productos, producto)

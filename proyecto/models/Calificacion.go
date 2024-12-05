@@ -11,6 +11,15 @@ type Calificacion struct {
 	Fecha      time.Time `json:"fecha"`
 }
 
+// GetPuntuacion  y Set devuelve y actualiza la puntuación de la calificación
+func (c *Calificacion) GetPuntuacion() int {
+	return c.Puntuacion
+}
+
+func (c *Calificacion) SetPuntuacion(puntuacion int) {
+	c.Puntuacion = puntuacion
+}
+
 // DarCalificacion asigna puntuación y comentario a una calificación
 func (c *Calificacion) DarCalificacion(puntuacion int, comentario string) {
 	c.Puntuacion = puntuacion
